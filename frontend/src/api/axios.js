@@ -1,8 +1,8 @@
 import axios from "axios";
 var local = "http://localhost:5000/api";
-var remote = "https://backend-dec-56b1.onrender.com/api";
+var remote = "https://unfv-dec.onrender.com";
 const api = axios.create({
-  baseURL: local,
+  baseURL: remote,
   withCredentials: true,
 });
 
