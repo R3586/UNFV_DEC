@@ -21,6 +21,6 @@ def predecir_con_tflite(datos_entrada):
 
 # Modelo para conexión a base de datos
 def obtener_conexion_bd():
-    return psycopg2.connect('postgresql://db_user:FstWLa97U8RektcQgi6LQIgm90MK7CaP@dpg-d1nb3p3ipnbc73cubgcg-a.oregon-postgres.render.com/db_dec')
-    #   return psycopg2.connect(os.getenv('DATABASE_URL'))
+    # return psycopg2.connect('postgresql://db_user:FstWLa97U8RektcQgi6LQIgm90MK7CaP@dpg-d1nb3p3ipnbc73cubgcg-a.oregon-postgres.render.com/db_dec')
+    return psycopg2.connect(os.getenv('DATABASE_URL'))
     #   postgresql://db_user:FstWLa97U8RektcQgi6LQIgm90MK7CaP@dpg-d1nb3p3ipnbc73cubgcg-a/db_dec
