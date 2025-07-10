@@ -1,6 +1,6 @@
 import axios from "axios";
 var local = "http://localhost:5000/api";
-var remote = "https://unfv-dec.onrender.com/api";
+var remote = "https://unfv-dec-7xrz.onrender.com/api";
 const api = axios.create({
   baseURL: remote,
   withCredentials: true, // Envía cookies y headers de autenticación
