@@ -12,7 +12,7 @@ app = Flask(__name__)
 CORS(app, 
      resources={
          r"/*": {  # O puedes especificar rutas como r"/login"
-             "origins": "https://unfv-dec-react.onrender.com",  # Tu frontend
+             "origins": "https://unfv-dec-react-0yp3.onrender.com",  # Tu frontend
              "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],  # Métodos permitidos
              "allow_headers": ["Content-Type", "Authorization"],  # Headers permitidos
              "supports_credentials": True  # Para cookies/sesiones
