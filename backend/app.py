@@ -30,5 +30,12 @@ app.register_blueprint(ControladorAdmin.blueprint)
 app.register_blueprint(ControladorConfiguracion.blueprint)
 app.register_blueprint(ControladorSesion.blueprint)
 
+@app.route('/api/verify')
+def session_check():
+    return jsonify({
+        "user_id": session.get("user_id"),
+        "rol": session.get("rol")
+    })
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
