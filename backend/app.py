@@ -19,6 +19,8 @@ CORS(app,
          }
      })
 app.secret_key = 'SECRET_KEY'
+app.config['SESSION_COOKIE_SAMESITE'] = 'None'
+app.config['SESSION_COOKIE_SECURE'] = True
 
 app.register_blueprint(rutas)
 app.register_blueprint(ControladorUsuario.blueprint)
