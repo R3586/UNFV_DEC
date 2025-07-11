@@ -11,16 +11,15 @@ from controlador.controlador_sesion import ControladorSesion
 app = Flask(__name__)
 CORS(app, 
      resources={
-         r"/*": {  # O puedes especificar rutas como r"/login"
-             "origins": "https://unfv-dec-react-0yp3.onrender.com",  # Tu frontend
-             "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],  # Métodos permitidos
-             "allow_headers": ["Content-Type", "Authorization"],  # Headers permitidos
-             "supports_credentials": True  # Para cookies/sesiones
+         r"/*": { 
+             "origins": "https://unfv-dec-react.onrender.com",
+             "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+             "allow_headers": ["Content-Type", "Authorization"], 
+             "supports_credentials": True 
          }
      })
 app.secret_key = 'SECRET_KEY'
 
-# Registrar blueprint de rutas
 app.register_blueprint(rutas)
 app.register_blueprint(ControladorUsuario.blueprint)
 app.register_blueprint(ControladorDiagnostico.blueprint)
